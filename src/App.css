@@ -1,12 +1,19 @@
-.main{
-    width:30%;
-    margin: auto;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+.main{
+    display:flex;
+    flex-wrap: wrap;
+}
+
 .btn{
     background-color: black;
     color:white;
     border-radius: 10%;
     padding:2% 5%;
+    margin-top: 2%;
 }
 .btn:hover{
     color:black;

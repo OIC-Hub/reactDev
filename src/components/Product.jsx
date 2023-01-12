@@ -1,14 +1,12 @@
 import Button from './Button';
 import './products.css';
-function Product(props) {
-console.log(props)
-
-
+function Product({productName, imageSrc, price, description}) {
+// const {productName, imageSrc, price, description} = props
   return (
     <div className='product'>
-        <img src={props.imageSrc} alt={props.productName} />
-        <p>{props.description}</p>
- <p>{props.price}</p>
+        <img src={imageSrc} alt={productName} />
+        <p>{description}</p>
+ <p>{price}</p>
     <Button />
     </div>
   )

@@ -1,17 +1,22 @@
 import Button from './Button';
+import { Link } from 'react-router-dom';
 import './products.css';
-function Product({productName, imageSrc, price, description}) {
+function Product(props) {
+  const {id, title, description,price, discountPercentage, rating, stock, brand, category, thumbnail, images } = props;
+
   const style ={
     borderBottom:'1px outset grey',
      backgroundColor:'white'
      }
-// const {productName, imageSrc, price, description} = props
+ console.log(props)
   return (
     <div className='product' style={style}>
-        <img src={imageSrc} alt={productName} />
+      <h3 className='center'> {title}</h3>
+        <img src={images[0]} alt={title} />
         <p>{description}</p>
- <p>{price}</p>
-    <Button />
+ <p style={{marginTop:'2%'}}> Price: {price}   <span style={{marginLeft:'2%'}}>Discount: {discountPercentage}</span></p>
+   <Link to='/' className="btn btn-warning">Details</Link>
+    <Button  />
     </div>
   )
 }

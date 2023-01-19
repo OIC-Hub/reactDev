@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 }
+
 .main{
     display:flex;
     flex-wrap: wrap;
@@ -13,7 +14,17 @@
     color:white;
     border-radius: 10%;
     padding:2% 5%;
-    margin-top: 2%;
+    margin:2%;
+    display:inline-block;
+    text-decoration: none;
+}
+.btn-warning{
+    background-color: orange;
+}
+.btn-warning:hover{
+    background-color: white;
+    color:black;
+    outline: 1px solid yellow;
 }
 .btn:hover{
     color:black;

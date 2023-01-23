@@ -15,7 +15,7 @@ function Product(props) {
         <img src={images[0]} alt={title} />
         <p>{description}</p>
  <p style={{marginTop:'2%'}}> Price: {price}   <span style={{marginLeft:'2%'}}>Discount: {discountPercentage}</span></p>
-   <Link to='/' className="btn btn-warning">Details</Link>
+   <Link to={`/product/${id}`} className="btn btn-warning">Details</Link>
     <Button  />
     </div>
   )

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import axios from 'axios';
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 function SingleProduct() { 
   const [data, setdata] = useState({});
  const {id}= useParams();
@@ -18,7 +18,10 @@ function SingleProduct() {
   }, []);
 
   return (
-    <div> Single product</div>
+    <Fragment>
+        
+
+    </Fragment>
   )
 }
 

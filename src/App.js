@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Nav from './components/includes/Nav';
+import NotFound from './components/NotFound';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import ProductsPage from './pages/ProductsPage';
@@ -17,6 +18,7 @@ function App(){
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/register" element={<RegistrationPage />} />
         <Route path='login' element={<LoginPage/>}/>
+       <Route path='*' element={<NotFound />}></Route>
     </Routes>
     </>
     </BrowserRouter>

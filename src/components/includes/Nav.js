@@ -3,14 +3,18 @@ import Home from '../../pages/Home';
 import LoginPage from '../../pages/LoginPage';
 import ProductsPage from '../../pages/ProductsPage';
 import RegistrationPage from '../../pages/RegistrationPage';
+import style from './Nav.module.css';
+
 function Nav() {
   return (
      <header>
         <nav>
-     <Link to="/" > Home</Link>
-     <Link to="/products" > Products</Link>
-     <Link to="register">Rigester</Link>
-     <Link to="login">Login</Link>
+      <ul className={style.navBar}>
+     <li> <Link to="/" > Home</Link> </li> 
+     <li><Link to="/products" > Products</Link></li>
+     <li><Link to="register">Rigester</Link></li>
+     <li><Link to="login">Login</Link></li>
+      </ul>
         </nav>
      </header>
   )

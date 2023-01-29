@@ -1,6 +1,14 @@
 .navBar{
     display:flex;
     background-color: green;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftnavBar{
+    display:flex;
+}
+.rightnavBar{
+    display:flex;
 }
 .navBar li{
     list-style-type: none;

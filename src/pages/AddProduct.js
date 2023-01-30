@@ -28,8 +28,9 @@ function AddProduct() {
         images: product.image
     })
     .then(res => {
-        console.log(res)
-        navigate('/')
+        localStorage.setItem('product', JSON.stringify(res.data))
+        localStorage.getItem('name')
+      navigate('/')
     })
     .catch(err => {
         console.error(err); 

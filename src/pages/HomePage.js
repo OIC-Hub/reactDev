@@ -19,12 +19,29 @@ function HomePage() {
       console.log(err)
     }
   } 
+ 
+  
+    const addProduct=()=>{
+      if(localStorage.key('product') && products.length > 0){
+      let prod = JSON.parse(localStorage.getItem('product'));
+         console.log(prod )
+      setProducts(products.push(prod))
+    }
+    return 
+  
+    // products.push(JSON.parse(localStorage.getItem('product')))
+  }
+   useEffect(()=>{
+    addProduct()
+    console.log(products)
+   }, [])
     useEffect(()=>{
         getProduct();
+        
     }, [products])
-        return(
+
+       return(
           <>
-           {search}
               <p>
                 <input type='search' name="search" placeholder="Search by product name" onChange={(e)=> setSearch(e.target.value)} />
               </p>

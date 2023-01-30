@@ -8,7 +8,7 @@ function Product(props) {
     borderBottom:'1px outset grey',
      backgroundColor:'white'
      }
- console.log(props)
+
   return (
     <div className='product' style={style}>
       <h3 className='center'> {title}</h3>

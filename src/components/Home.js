@@ -2,14 +2,17 @@ import Button from './Button';
 import { Link } from 'react-router-dom';
 import './products.css';
 function Home(props) {
+   console.log(props)
+
   const {id, title, description,price, discountPercentage, rating, stock, brand, category, thumbnail, images } = props;
 
   const style ={
     borderBottom:'1px outset grey',
      backgroundColor:'white'
      }
- console.log(props)
   return (
+    <>
+    {JSON.stringify(props)}
     <div className='product' style={style}>
       <h3 className='center'> {title}</h3>
         <img src={images[0]} alt={title} />
@@ -18,6 +21,7 @@ function Home(props) {
    <Link to={`/product/${id}`} className="btn btn-warning">Details</Link>
     <Button  />
     </div>
+    </>
   )
 }
 export default Home

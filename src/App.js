@@ -23,6 +23,7 @@ function App(){
        <Route path='*' element={<NotFound />}></Route>
        <Route path="/add-product" element={<AddProduct />} />
       <Route path='/admin-products' element={<AdminProducts/>} />
+      <Route path="/app" element={<App/>} />
     </Routes>
     </>
    
